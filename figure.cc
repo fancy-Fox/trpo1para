@@ -68,7 +68,7 @@ std::string Figure::get_type() {
 }
 
 std::pair<double, double> Figure::get_coords() {
-	return make_pair(0.0,0.0);
+	return std::make_pair(0.0,0.0);
 }
 
 
