@@ -59,19 +59,19 @@ void Figure::set_radius(double r) {
 
 
 double Figure::get_radius() {
-
+	return 0.0;
 }
 
 
 std::string Figure::get_type() {
-
+	return "";
 }
 
 std::pair<double, double> Figure::get_coords() {
-
+	return make_pair(0.0,0.0);
 }
 
 
 int Figure::get_index() {
-	
+	return 0;
 }
