@@ -2,7 +2,7 @@
 
 Circle::Circle(int index) {
 	index_ = index;
-	type_ = "circle";
+	type_ = "Circle";
 }
 
 void Circle::set_coords(double x, double y) {

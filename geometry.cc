@@ -9,7 +9,7 @@
 
 std::string parse_type(const std::string& input, int* position, char delimer) {
 	std::string res;
-	while(*position < input.size() && input[*position] != delimer) {
+	while(*position < (int)input.size() && input[*position] != delimer) {
 		res += input[*position];
 		*position += 1;
 	}
@@ -22,7 +22,7 @@ double dist(double x1, double y1, double x2, double y2) {
 }
 
 int main() {
-	std::vector<Figure> figures;
+	std::vector<Circle> figures;
 	int index = 1;
 	while (1) {
 		std::string input = "Circle(13 14, 5)"; // example
@@ -57,13 +57,16 @@ int main() {
 		++index;
 	}
 	std::vector<std::pair<int,int>> crossed_figures;
-	for (auto& i : figures) {
-		std:: cout << i.get_coords().first << " " << i.get_coords().second << " " << i.get_radius() << std::endl;
-	}
-	for (int i = 0; i < figures.size(); ++i) {
-		for (int j = i + 1; j < figures.size(); ++j) {
+	// for (auto& i : figures) {
+	// 	std:: cout << i.get_coords().first << " " << i.get_coords().second << " " << i.get_radius() << std::endl;
+	// }
+	// std::cout << figures.size() << std::endl;
+	for (int i = 0; i < (int)figures.size(); ++i) {
+		for (int j = i + 1; j < (int)figures.size(); ++j) {
 			if (figures[i].get_type() == "Circle" and figures[j].get_type() == "Circle") {
 				std::pair<double, double> a = figures[i].get_coords(), b = figures[j].get_coords();
+				// std:: cout << figures[i].get_radius() + figures[j].get_radius() << std::endl;
+				// std::cout << dist(a.first,a.second,b.first,b.second) << std::endl;
 				if (figures[i].get_radius() + figures[j].get_radius() >= dist(a.first,a.second,b.first,b.second)) {
 					crossed_figures.emplace_back(figures[i].get_index(), figures[j].get_index());
 				}

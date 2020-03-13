@@ -12,7 +12,7 @@ Figure::Figure(const std::string& input, int index) {
 std::pair<double, double> Figure::get_pair_of_numbers(const std::string& input, int* position, char first_delimer, char second_delimer) {
 	std::pair<double, double> res = {0, 0};
 	bool is_ready = false;
-	while (*position < input.size() && input[*position] != second_delimer) {
+	while (*position < (int)input.size() && input[*position] != second_delimer) {
 		if (input[*position] == first_delimer) {
 			*position += 1;
 			is_ready = true;
@@ -34,7 +34,7 @@ std::pair<double, double> Figure::get_pair_of_numbers(const std::string& input, 
 
 double Figure::get_number(const std::string& input, int* position, char delimer) {
 	double res = 0.;
-	while (*position < input.size() && input[*position] != delimer) {
+	while (*position < (int)input.size() && input[*position] != delimer) {
 		if (input[*position] < '0' or input[*position] > '9') {
 			return -1;
 		}
