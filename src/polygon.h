@@ -5,10 +5,10 @@
 #include "figure.h"
 
 class Polygon : public Figure {
-	public:
-		Polygon(const std::string&, int);
+public:
+    Polygon(const std::string&, int);
 
-	private:
-		int index_;
-		std::string type_;
+private:
+    int index_;
+    std::string type_;
 };
