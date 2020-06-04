@@ -1,7 +1,7 @@
 # флаги, используемые при компиляции
 FLAGS = -Wall -Werror --std=c++11
 EXE = bin/geometry.exe
-TESTS = bin/test
+TESTS = bin/test.exe
 DIR_SRC = build/src
 DIR_TEST = build/test
 GTEST_D = thirdparty/googletest
