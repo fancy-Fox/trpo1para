@@ -1,8 +1,9 @@
-#include "parse.h"
 #include <cmath>
 #include <iostream>
 #include <string>
 #include <vector>
+
+#include "parse.h"
 
 std::string parse_type(const std::string& input, int* position, char delimer)
 {
