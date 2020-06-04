@@ -4,8 +4,8 @@
 #include <vector>
 
 #include "circle.h"
-#include "polygon.h"
 #include "parse.h"
+#include "polygon.h"
 
 double dist(double x1, double y1, double x2, double y2)
 {
